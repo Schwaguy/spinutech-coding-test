@@ -182,11 +182,17 @@ body {
         padding-top: 0.25em;
         padding-bottom: 0; }
   .shape-row#squares {
-    margin-bottom: 2em; }
+    height: auto;
+    max-height: 900px;
+    margin-bottom: 2em;
+    -webkit-transition: all 0.50s ease-in-out;
+    -moz-transition: all 0.50s ease-in-out;
+    -ms-transition: all 0.50s ease-in-out;
+    -o-transition: all 0.50s ease-in-out;
+    transition: all 0.50s ease-in-out; }
     .shape-row#squares .contain {
+      position: relative;
       flex-direction: column-reverse;
-      -webkit-opacity: 0;
-      opacity: 0;
       -webkit-transition: all 0.50s ease-in-out;
       -moz-transition: all 0.50s ease-in-out;
       -ms-transition: all 0.50s ease-in-out;
@@ -217,24 +223,21 @@ body {
       .shape-row#squares .contain h2 {
         padding-top: 0;
         padding-bottom: 0.25em; }
-      .shape-row#squares .contain.active {
-        -webkit-opacity: 1;
-        opacity: 1; }
-    .shape-row#squares:hover > .active:not(:hover), .shape-row#squares:focus-visible > .active:not(:hover) {
+    .shape-row#squares:hover > *:not(:hover), .shape-row#squares:focus-visible > *:not(:hover) {
       -webkit-opacity: 0.5;
       opacity: 0.5; }
 
-#built-with {
+#made-with {
   padding-bottom: 2em; }
-  #built-with h2 {
+  #made-with h2 {
     padding: 0 0 0.25em 0; }
-  #built-with ul {
+  #made-with ul {
     display: flex;
     list-style: none;
     justify-content: center;
     margin: 0;
     padding: 0; }
-    #built-with ul li {
+    #made-with ul li {
       margin: 0;
       padding: 0 1em;
       text-align: center; }

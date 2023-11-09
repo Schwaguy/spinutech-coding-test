@@ -140,11 +140,13 @@ body {
 	
 	// Square Row Specifinc Styling
 	&#squares {
+		height: auto;
+		max-height: 900px;
 		margin-bottom: 2em;
+		@include animate-medium();
 		.contain {
+			position: relative;
 			flex-direction: column-reverse;
-			-webkit-opacity: 0;
-					opacity: 0;
 			@include animate-medium();
 			.shape {
 				@include square-styles();
@@ -156,14 +158,10 @@ body {
 				padding-top: 0;
 				padding-bottom: 0.25em;
 			}
-			&.active {
-				-webkit-opacity: 1;
-						opacity: 1;
-			}
 		}
 		&:hover,
 		&:focus-visible {
-			> .active:not(:hover) {
+			> *:not(:hover) {
 				-webkit-opacity: 0.5;
 						opacity: 0.5;
 			}
@@ -171,8 +169,8 @@ body {
 	}
 }
 
-// Built With Section
-#built-with {
+// Made with Section
+#made-with {
 	padding-bottom: 2em;
 	h2 {
 		padding: 0 0 0.25em 0;
