@@ -248,4 +248,8 @@ body {
     background: #fff; }
 
   .container {
-    width: 95%; } }
+    width: 95%; }
+
+  .shape-row .contain.yellow h2 {
+    text-shadow: 1px 1px 1px #0000;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15); } }
